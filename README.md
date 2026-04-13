@@ -1,4 +1,4 @@
-#Overview
+# Overview
 This project displays a production-style CI/CD pipeline that I built on self-hosted infrastructure.
 A Python Flask API is what is deployed but the real focus was in building this pipeline.
 The pipeline utilizes unit testing, three layers of security testing (SAST [Semgrep], secrets detection [Gitleaks], and container security [Trivy]) before code can be deployed.
