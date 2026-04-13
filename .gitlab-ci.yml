@@ -17,7 +17,9 @@ unit-tests:
 
 semgrep:
   stage: scan
-  image: semgrep/semgrep
+  image: 
+    name: semgrep/semgrep
+    entrypoint: [""]
   script:
     - semgrep scan --config auto .
 
@@ -29,7 +31,9 @@ gitleaks:
 
 trivy:
   stage: scan
-  image: aquasec/trivy
+  image: 
+    name: aquasec/trivy:0.61.0
+    entrypoint: [""]
   script:
     - trivy fs --exit-code 1 --severity HIGH,CRITICAL .
 
