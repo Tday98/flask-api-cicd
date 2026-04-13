@@ -25,7 +25,9 @@ semgrep:
 
 gitleaks:
   stage: scan
-  image: zricethezav/gitleaks
+  image:
+    name: zricethezac/gitleaks
+    entrypoint: [""]
   script:
     - gitleaks detect --source . -v
 
