@@ -13,6 +13,8 @@ spec:
       labels:
         app: flask-api
     spec:
+      imagePullSecrets:
+        - name: gitlab-registry-secret
       containers:
         - name: flask-api
           image: gitlab.home:5050/tmd526/flask-api:latest
