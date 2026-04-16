@@ -18,7 +18,7 @@ spec:
         - name: gitlab-registry-secret
       containers:
         - name: flask-api
-          image: gitlab.home:5050/tmd526/flask-api:61f0c018
+          image: gitlab.home:5050/tmd526/flask-api:23e781dd
           ports:
             - containerPort: 8080
           imagePullPolicy: Always
