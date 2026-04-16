@@ -65,7 +65,7 @@ deploy:
     - cd repo
     - sed -i "s|flask-api:.*|flask-api:$IMAGE_TAG|g" k8s/deployment.yaml
     - git add k8s/deployment.yaml
-    - git commit -m "CI - update image tag to $IMAGE_TAG"
+    - git commit -m "CI - update image tag to $IMAGE_TAG [skip ci]"
     - git push
   only:
     - master
