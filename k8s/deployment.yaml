@@ -5,6 +5,7 @@ metadata:
   namespace: flask-app
 spec:
   replicas: 2
+  revisionHistoryLimit: 1
   selector:
     matchLabels:
       app: flask-api
@@ -17,7 +18,7 @@ spec:
         - name: gitlab-registry-secret
       containers:
         - name: flask-api
-          image: gitlab.home:5050/tmd526/flask-api:latest
+          image: gitlab.home:5050/tmd526/flask-api:436eb39d
           ports:
             - containerPort: 8080
           imagePullPolicy: Always
