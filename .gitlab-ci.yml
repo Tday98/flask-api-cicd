@@ -61,7 +61,7 @@ deploy:
     - git config --global user.email "ci@gitlab.home"
     - git config --global user.name "Gitlab CI"
   script:
-    - git clone https://tmd526:$GITLAB_TOKEN@gitlab.home/tmd526/flask-api.git repo
+    - git clone --config http.sslVerify=false https://tmd526:$GITLAB_TOKEN@gitlab.home/tmd526/flask-api.git repo
     - cd repo
     - sed -i "s|flask-api:.*|flask-api:$IMAGE_TAG|g" k8s/deployment.yaml
     - git add k8s/deployment.yaml
